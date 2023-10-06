@@ -1,13 +1,9 @@
-import React from 'react'
-import Header from './Header'
-
-const Spinner = () => {
+function Spinner() {
   return (
-    <>
-    <div className='container'>
-        <Header/>
+    <div className="loadingSpinnerContainer">
+      <div className="loadingSpinner"></div>
     </div>
-    </>
+  );
 }
 
-export default Spinner
+export default Spinner;

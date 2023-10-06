@@ -1,7 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
+import {useSelector, useDispatch} from 'react-redux'
+import { logout, reset } from "../features/auth/authSlice";
+
+
 const Header = () => {
+
   return (
     <header className="header">
       <div className="logo">
