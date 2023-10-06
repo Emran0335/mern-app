@@ -1,28 +1,31 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
-import Dashboad from "./pages/Dashboad";
+import Dashboard from "./pages/Dashboad";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { Provider } from "react-redux";
 import store from "./app/store";
+import "./App.css";
 
 function App() {
   return (
-    <Provider store={store}>
-      <>
+    <>
+      <Provider store={store}>
         <Router>
           <div className="container">
             <Header />
             <Routes>
-              <Route path="/" element={<Dashboad />} />
+              <Route path="/" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
           </div>
         </Router>
-      </>
-    </Provider>
+        <ToastContainer />
+      </Provider>
+    </>
   );
 }
 
