@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const GoalItem = () => {
+const GoalItem = ({ goal }) => {
+
   return (
-    <div className='goal'>
-        <div>
-            {new Date().toLocaleString('en-us')}
-        </div>
-        <h2>Goal Text</h2>
-        <button className='close'>X</button>
+    <div className="goal">
+      <div>{new Date(goal.createdAt).toLocaleString("en-us")}</div>
+      <h2>{goal.text}</h2>
+      <button className="close">X</button>
     </div>
-  )
-}
+  );
+};
 
-export default GoalItem
+export default GoalItem;

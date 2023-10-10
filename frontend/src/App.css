@@ -106,6 +106,8 @@ h3 {
   cursor: pointer;
   border: none;
   background: none;
+  font-size: large;
+  font-weight: 600;
 }
 
 .form,
