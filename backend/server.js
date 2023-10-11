@@ -3,9 +3,9 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv").config();
 const PORT = process.env.PORT || 5000;
-const connectDB = require("./backend/config/db");
+const connectDB = require("./config/db");
 const colors = require("colors");
-const { errorHandler } = require("./backend/middleware/errorMiddleware");
+const { errorHandler } = require("./middleware/errorMiddleware");
 
 const requestLogger = (request, response, next) => {
   console.log("Method:", request.method);
@@ -24,8 +24,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // getting data
-app.use("/api/goals", require("./backend/routes/goalRoutes"));
-app.use("/api/users", require("./backend/routes/userRoutes"));
+app.use("/api/goals", require("./routes/goalRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 
 // // Serve frontend
 // if (process.env.NODE_ENV === "production") {
