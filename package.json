@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=production node backend/server.js",
+    "dev": "node backend/server.js",
     "build": "backend",
-    "start": "cross-env NODE_ENV=development nodemon backend/server.js"
+    "start": "nodemon backend/server.js"
   },
   "keywords": [],
   "author": "Emran Hossain",
